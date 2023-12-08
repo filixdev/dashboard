@@ -5,7 +5,6 @@ import { KeyboardArrowLeftIcon, KeyboardArrowRightIcon } from '../Icons/Icons'
 import { sidebarData } from './sidebarData'
 
 export const Layout = () => {
-
     const [toggleSideBar, setToggleSideBar] = useState(false)
 
     const handleToggleSideBar = () => {
