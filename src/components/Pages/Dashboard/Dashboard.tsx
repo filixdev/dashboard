@@ -1,7 +1,10 @@
-import React from 'react'
+import { BtcWidget } from '../../Widget/BtcWidget'
 
 export const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+      Dashboard
+      <BtcWidget />
+    </div>
   )
 }

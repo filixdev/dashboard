@@ -12,6 +12,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import PlaceIcon from '@mui/icons-material/Place';
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export {
     HomeIcon,
@@ -27,5 +29,7 @@ export {
     DeleteIcon,
     EditIcon,
     SmartToyIcon,
-    PlaceIcon
+    PlaceIcon,
+    ArrowDropUpIcon,
+    ArrowDropDownIcon
 }

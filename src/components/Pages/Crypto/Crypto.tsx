@@ -1,11 +1,11 @@
-import {CoinList} from "./CoinList"
+import {CoinTable} from "./CoinTable"
 
 export const Crypto = () => {
 
   return (
     <>
       <div>Crypto</div>
-      <CoinList />
+      <CoinTable />
     </>
   )
 }
