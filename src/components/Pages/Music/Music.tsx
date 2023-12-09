@@ -1,8 +1,11 @@
-import React from 'react'
+import { MusicPlayer } from './MusicPlayer'
 
 export const Music = () => {
   return (
-    <div>Music</div>
+    <>
+      <div>Music</div>
+      <MusicPlayer />
+    </>
   )
 }
 

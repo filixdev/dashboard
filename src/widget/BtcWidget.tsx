@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { styled } from 'styled-components'
-import { priceColor } from '../../utils'
-import { ArrowDropDownIcon, ArrowDropUpIcon } from '../Icons/Icons'
+import { priceColor } from '../utils'
+import { ArrowDropDownIcon, ArrowDropUpIcon } from '../components/Icons/Icons'
 
 interface CoinTicker {
     id: string
@@ -36,18 +36,14 @@ const Logo = styled.img`
     width: 2rem;
 `
 
-const CoinName = styled.p`
-    margin: 0;
-`
+const CoinName = styled.p``
 
 const CoinPrice = styled.p`
     font-weight: bold;
-    margin: 0;
 `
 
 const CoinPercentage = styled.p`
     font-size: 1.2rem;
-    margin: 0;
 `
 
 const PriceContainer = styled.div<{ priceChangeColor: string }>`
@@ -85,7 +81,6 @@ export const BtcWidget = () => {
     const renderPriceChange = (priceColor: string) => {
         return priceColor === 'green' ? (<ArrowDropUpIcon fill={priceColor}/>) : (<ArrowDropDownIcon fill={priceColor}/>)
     }
-
 
     return (
         <>

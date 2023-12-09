@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { GeolocationError, Options, WeatherResponse, GeolocationPosition } from './types'
-import { getDate } from '../../Utils/date';
+import { getDate } from '../../../utils/date';
 import { PlaceIcon } from '../../Icons/Icons';
 
 export const Weather = () => {

@@ -14,6 +14,8 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 import PlaceIcon from '@mui/icons-material/Place';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import FastForwardIcon from '@mui/icons-material/FastForward';
+import FastRewindIcon from '@mui/icons-material/FastRewind';
 
 export {
     HomeIcon,
@@ -31,5 +33,7 @@ export {
     SmartToyIcon,
     PlaceIcon,
     ArrowDropUpIcon,
-    ArrowDropDownIcon
+    ArrowDropDownIcon,
+    FastRewindIcon,
+    FastForwardIcon
 }

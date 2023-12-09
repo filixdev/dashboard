@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { CoinLogo, CoinName, CoinNameWrap, Input, Table, TableD, TableH, TableR } from './style';
-import { priceColor } from '../../Utils';
+import { priceColor } from '../../../utils';
 
 export interface CryptoCurrency {
   id: string
