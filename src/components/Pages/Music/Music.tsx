@@ -1,10 +1,10 @@
-import { MusicPlayer } from './MusicPlayer'
+import { SpotifyWeb } from "./SpotifyWeb"
 
 export const Music = () => {
   return (
     <>
-      <div>Music</div>
-      <MusicPlayer />
+      <h1>Music</h1>
+      <SpotifyWeb />
     </>
   )
 }

@@ -1,3 +1,4 @@
+import { SpotifyWebWidget } from '../../../widget/MusicPlayerWidget'
 import { BtcWidget } from '../../Widget/BtcWidget'
 
 export const Dashboard = () => {
@@ -5,6 +6,7 @@ export const Dashboard = () => {
     <div>
       Dashboard
       <BtcWidget />
+      <SpotifyWebWidget />
     </div>
   )
 }
