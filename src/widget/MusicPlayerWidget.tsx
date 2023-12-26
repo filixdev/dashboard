@@ -52,7 +52,7 @@ export const SpotifyWebWidget = () => {
                 <InputPlaylist type="text" name="playlistUrl" placeholder="Enter Playlist ID" />
                 <ButtonChangePlayList type="submit">Submit</ButtonChangePlayList>
             </FormPlaylist>
-            <iframe style={{ borderRadius: '12px' }} src={playlistUrl} width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style={{ borderRadius: '12px' }} src={playlistUrl} width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" />
         </SpotifyWebWidgetContainer>
     );
 };

@@ -5,33 +5,29 @@ const CalendarWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: fit-content;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 `;
 
 const CalendarHeader = styled.div`
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   gap: 1rem;
+  padding: 6px;
   width: 100%;
-  padding: 1rem;
 `;
 
 const CalendarGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 0; 
-  width: 100%;
-  border-top: 1px solid #ddd;
 `;
 
 const Day = styled.div<{ isToday?: boolean }>`
-  font-size: 1.2rem;
+  padding: 6px;
   text-align: center;
-  border-right: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  padding: 2rem 1rem;
 
   ${props =>
     props.isToday &&
@@ -41,10 +37,6 @@ const Day = styled.div<{ isToday?: boolean }>`
     `}
 `;
 
-const DaysOfWeek = styled(Day)`
-  padding: 1rem 1rem;
-`
-
 const CalendarButtonContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -52,11 +44,11 @@ const CalendarButtonContainer = styled.div`
     gap: 4px;
 `;
 
-export const Calendar: React.FC = () => {
+export const CalendarWidget: React.FC = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
 
   const today = new Date();
-  const daysOfWeek = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
   const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
 
@@ -84,7 +76,7 @@ export const Calendar: React.FC = () => {
   return (
     <CalendarWrapper>
       <CalendarHeader>
-        <h2>{currentDate.toLocaleDateString('default', { month: 'long', year: 'numeric', day: 'numeric' })}</h2>
+        <h3>{currentDate.toLocaleDateString('default', { month: 'long', year: 'numeric', day: 'numeric' })}</h3>
         <CalendarButtonContainer>
           <button onClick={previousMonth}>Prev</button>
           <button onClick={backToday}>Today</button>
@@ -93,7 +85,7 @@ export const Calendar: React.FC = () => {
       </CalendarHeader>
       <CalendarGrid>
         {daysOfWeek.map(day => (
-          <DaysOfWeek key={day}>{day}</DaysOfWeek>
+          <Day key={day}>{day}</Day>
         ))}
         {days}
       </CalendarGrid>
