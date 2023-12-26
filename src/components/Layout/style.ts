@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const SideBarContainer = styled.div<{ toggleSideBar: boolean }>`
   margin: 0;
   padding: 0;
-  width: ${({ toggleSideBar }) => (toggleSideBar ? "200px" : "80px")};
+  width: ${({ toggleSideBar }) => (toggleSideBar ? "200px" : "")};
   height: 100vh;
   z-index: 999;
   overflow: auto;
@@ -20,6 +20,9 @@ export const ListStyled = styled.ul`
   list-style: none;
   padding: 1rem;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const LinkListItem = styled(Link)<{ toggleSideBar: boolean }>`
@@ -29,8 +32,7 @@ export const LinkListItem = styled(Link)<{ toggleSideBar: boolean }>`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border-radius: 5px;
-  justify-content: ${({ toggleSideBar }) =>
+    justify-content: ${({ toggleSideBar }) =>
     toggleSideBar ? "unset" : "center"};
   &:hover {
     background-color: rgba(255, 255, 255, 0.5);
