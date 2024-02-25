@@ -1,4 +1,4 @@
-import { CalendarMonthIcon, CurrencyBitcoinIcon, FormatListBulletedIcon, HomeIcon, NoteIcon, PermContactCalendarIcon, PlayCircleIcon, SmartToyIcon, WbSunnyIcon } from '../Icons/Icons'
+import { CalendarMonthIcon, CurrencyBitcoinIcon, FormatListBulletedIcon, HomeIcon, NoteIcon, PermContactCalendarIcon, PlayCircleIcon, SmartToyIcon, WbSunnyIcon } from '../../Icons/Icons'
 
 type SidebarItem = {
     id: number;

@@ -83,7 +83,7 @@ export const BtcWidget = () => {
     const btc = coin.filter(coin => coin.id === 'bitcoin')
 
     const renderPriceChange = (priceColor: string) => {
-        return priceColor === 'green' ? (<ArrowDropUpIcon fill={priceColor}/>) : (<ArrowDropDownIcon fill={priceColor}/>)
+        return priceColor === 'green' ? (<ArrowDropUpIcon fill={priceColor} />) : (<ArrowDropDownIcon fill={priceColor} />)
     }
 
 

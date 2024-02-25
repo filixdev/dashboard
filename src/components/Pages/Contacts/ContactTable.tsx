@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { Contact } from "./Contacts";
+import { Contact } from ".";
 
 interface ContactTableProps {
     contacts: Contact[];
     deleteContact: (contact: Contact) => void;
+    editContact: (contact: string) => void;
 }
 
 const MAX_ROWS = 10;
@@ -22,7 +23,7 @@ const Button = styled.button`
     width: 100px;
 `;
 
-export const ContactTable: React.FC<ContactTableProps> = ({ contacts, deleteContact }) => {
+export const ContactTable: React.FC<ContactTableProps> = ({ contacts, deleteContact, editContact }) => {
 
     const renderRows = () => {
         const rows = [];
@@ -38,7 +39,7 @@ export const ContactTable: React.FC<ContactTableProps> = ({ contacts, deleteCont
                     <td>{contact.group}</td>
                     <td>
                         <Button type="button" onClick={() => deleteContact(contact)}>Delete</Button>
-                        <Button type="button">Edit</Button>
+                        <Button type="button" onClick={() => editContact(contact.id)}>Edit</Button>
                     </td>
                 </tr>
             );

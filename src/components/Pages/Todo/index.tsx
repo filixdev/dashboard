@@ -1,10 +1,8 @@
 import { SetStateAction, useState } from "react"
+import { v4 as uuidv4 } from 'uuid'
 import { Button, Input, TodoContainer, TodoList } from "./style"
 import { TodoItem } from "./TodoItem"
-import { v4 as uuidv4 } from 'uuid'
 import { EditTodo } from "./EditTodo"
-
-// TODO: add redux and localstorage
 
 export interface Todos {
   id: string
