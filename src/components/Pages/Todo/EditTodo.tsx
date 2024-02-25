@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Todos } from "./Todo"
+import { Todos } from "."
 import { Button, Input } from "./style"
 
 interface EditTodoProps {

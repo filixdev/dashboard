@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { BackButton, LayoutContainer, LinkListItem, ListStyled, MainContainer, SideBarContainer } from './style'
-import { KeyboardArrowLeftIcon, KeyboardArrowRightIcon } from '../Icons/Icons'
 import { sidebarData } from './sidebarData'
+import { KeyboardArrowLeftIcon, KeyboardArrowRightIcon } from '../../Icons/Icons'
 
 export const Layout = () => {
     const [toggleSideBar, setToggleSideBar] = useState(false)
