@@ -17,6 +17,8 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import FastForwardIcon from '@mui/icons-material/FastForward';
 import FastRewindIcon from '@mui/icons-material/FastRewind';
 import CloseIcon from '@mui/icons-material/Close';
+import CheckIcon from '@mui/icons-material/Check';
+import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 
 export {
     HomeIcon,
@@ -37,5 +39,7 @@ export {
     ArrowDropDownIcon,
     FastRewindIcon,
     FastForwardIcon,
-    CloseIcon
+    CloseIcon,
+    CheckIcon,
+    CheckBoxOutlineBlankIcon
 }

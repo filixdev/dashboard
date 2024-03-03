@@ -1,8 +1,11 @@
 import { SetStateAction, useState } from "react"
 import { v4 as uuidv4 } from 'uuid'
-import { Button, Input, TodoContainer, TodoList } from "./style"
+import { Form, Heading1, Input, TextWrapper, TodoContainer, TodoList } from "./style"
 import { TodoItem } from "./TodoItem"
 import { EditTodo } from "./EditTodo"
+import { Button } from "../../Common/Button"
+import { Text } from "../../Common/Typography"
+import { CheckBoxOutlineBlankIcon, CheckIcon } from "../../Icons/Icons"
 
 export interface Todos {
   id: string
@@ -44,18 +47,23 @@ export const Todo = () => {
     setTodos(todos.map((todo: Todos) => todo.id === id ? { ...todo, text: value, isEditing: !todo.isEditing } : { ...todo }))
   }
 
-  const todoCompleted = todos.filter( todo => todo.checked === true).length
-  const todoNotCompleted = todos.filter( todo => todo.checked === false).length
+  const todoCompleted = todos.filter(todo => todo.checked === true).length
+  const todoNotCompleted = todos.filter(todo => todo.checked === false).length
 
   return (
     <div>
-      <h1>Get shit done!</h1>
-      <p>Todo completed: {todoCompleted}</p>
-      <p>Todo not completed: {todoNotCompleted}</p>
-      <form onSubmit={handleSubmit}>
-        <Input type="text" placeholder="add todo..." onChange={handleChange} value={inputValue} />
-        <Button type="submit">Add</Button>
-      </form>
+      <Heading1>Get shit done!</Heading1>
+      <TextWrapper>
+        <CheckIcon />
+        <Text>Todo completed: {todoCompleted}</Text>
+        <CheckBoxOutlineBlankIcon />
+        <Text>Todo not completed: {todoNotCompleted}</Text>
+      </TextWrapper>
+      <Form onSubmit={handleSubmit}>
+        <Input type="text" placeholder="Add todo . . ." onChange={handleChange} value={inputValue} />
+        {/* <Button type="submit">Add</Button> */}
+        <Button text='Add' onClick={() => null} />
+      </Form>
       <TodoContainer>
         <TodoList>
           {todos.map((todo, index) => (

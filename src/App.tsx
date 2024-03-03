@@ -5,7 +5,7 @@ import { theme } from './theme/theme'
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme.light}>
       <AppRoutes />
     </ThemeProvider>
   )
