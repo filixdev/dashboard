@@ -16,8 +16,8 @@ export const TodoItem: React.FC<TodoItemsProps> = ({ todo, toggleChecked, delete
         <TodoListItem>
             <TodoInput type="radio" name={todo.text} value={todo.text} checked={todo.checked} onClick={() => toggleChecked(todo.id)} />
             <TodoText checked={todo.checked}>{todo.text}</TodoText>
-            <DeleteIcon onClick={() => deleteTodo(todo.id)}/>
-            <EditIcon onClick={() => editTodo(todo.id)}/>
+            <DeleteIcon onClick={() => deleteTodo(todo.id)} color='action'/>
+            <EditIcon onClick={() => editTodo(todo.id)} color='action'/>
         </TodoListItem>
     )
 }

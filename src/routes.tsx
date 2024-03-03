@@ -3,7 +3,6 @@ import { ErrorPage, Music, LayoutWithSidebar, Todo, Crypto, Dashboard, Contacts,
 
 export const AppRoutes = () => {
   return (
-    <>
       <Routes>
         <Route element={<LayoutWithSidebar />}>
           <Route path="/" element={<Dashboard />} />
@@ -17,6 +16,5 @@ export const AppRoutes = () => {
           <Route path="/*" element={<ErrorPage />} />
         </Route>
       </Routes>
-    </>
   );
 };

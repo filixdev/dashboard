@@ -1,6 +1,4 @@
-// import './assets/fonts/fonts.css';
-
-export const theme = {
+export const defaultTheme = {
   colors: {
     primary: '#007bff', // Blue
     secondary: '#6c757d', // Grey
@@ -40,5 +38,49 @@ export const theme = {
     large: '12px',
   },
 };
+
+export const darktheme = {
+  primary: "#00bcd4",
+  secondary: "#f3f3f3",
+  border: "#e0e0e0",
+  text: "#fff",
+  background: "#212121",
+  success: '#28a745', // Green
+  danger: '#dc3545', // Red
+  warning: '#ffc107', // Yellow
+  info: '#17a2b8', // Cyan
+  light: '#f8f9fa',
+  dark: '#343a40',
+  white: '#ffffff',
+  black: '#000000',
+};
+
+export const lightTheme = {
+  primary: " #003366",
+  secondary: "#eee",
+  border: "#878787",
+  text: "#000",
+  background: "#fff",
+  success: '#28a745', // Green
+  danger: '#dc3545', // Red
+  warning: '#ffc107', // Yellow
+  info: '#17a2b8', // Cyan
+  light: '#f8f9fa',
+  dark: '#343a40',
+  white: '#ffffff',
+  black: '#000000',
+};
+
+export const theme = {
+  dark: {
+    ...defaultTheme,
+    colors: darktheme,
+  },
+  light: {
+    ...defaultTheme,
+    colors: lightTheme,
+  },
+};
+
 
 
