@@ -2,36 +2,49 @@ import React from 'react'
 import { styled } from 'styled-components'
 
 interface ButtonProps {
-    text: string
-    onClick: () => void
-    disabled?: boolean
-    className?: string
+  text?: string
+  onClick?: () => void
+  disabled?: boolean
+  className?: string
+  type?: 'button' | 'submit' | 'reset'
+  borderRadius?: 'squared' | 'rounded'
 }
 
-const CustomButton = styled.button`
-  min-height: 40px;
-  min-width: 80px;
+const DefaultButton = styled.button<ButtonProps>`
+  width: 6rem;
+  height: 40px;
   margin: 0;
-  padding: 10px 10px;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
   background-color: #222;
-  border-radius: 4px;
+  border-radius: ${props => props.borderRadius === 'rounded' ? '50px' : '6px'};
   border-style: none;
   color: #fff;
   cursor: pointer;
-
+  
   &:hover {
     opacity: .9;
   }
 
 `
 
-
-export const Button: React.FC<ButtonProps> = ({text, onClick, disabled = false, className}) => {
+export const Button: React.FC<ButtonProps> = ({
+  text,
+  onClick,
+  disabled = false,
+  type = 'submit',
+  borderRadius = 'squared',
+  className
+}) => {
   return (
-    <CustomButton type='submit' className={className} disabled={disabled} onClick={onClick}>
-        {text}
-    </CustomButton>
+    <DefaultButton type={type} className={className} disabled={disabled} onClick={onClick} borderRadius={borderRadius}>
+      {text}
+    </DefaultButton>
   )
 }

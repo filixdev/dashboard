@@ -1,4 +1,4 @@
-import { CalendarMonthIcon, CurrencyBitcoinIcon, FormatListBulletedIcon, HomeIcon, NoteIcon, PermContactCalendarIcon, PlayCircleIcon, SmartToyIcon, WbSunnyIcon } from '../../Icons/Icons'
+import { CalendarMonthIcon, FormatListBulletedIcon, HomeIcon, NoteIcon, PermContactCalendarIcon, PlayCircleIcon, SmartToyIcon, WbSunnyIcon } from '../../Icons/Icons'
 
 type SidebarItem = {
     id: number;
@@ -49,12 +49,6 @@ export const sidebarData: SidebarItem = [
         name: "Notes",
         path: "/notes",
         icon: <NoteIcon />,
-    },
-    {
-        id: 8,
-        name: "Crypto",
-        path: "/crypto",
-        icon: <CurrencyBitcoinIcon />,
     },
     {
         id: 9,

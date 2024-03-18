@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Todos } from "."
-import { Button, Input } from "./style"
+import { EditButton, FormEdit, Input } from "./style"
 
 interface EditTodoProps {
     todo: Todos
@@ -18,10 +18,10 @@ export const EditTodo: React.FC<EditTodoProps> = ({ todo, editText }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <Input type="text" placeholder="edit... " value={value} onChange={(e) => setValue(e.target.value)} />
-            <Button type="submit">Edit Todo</Button>
-        </form>
+        <FormEdit onSubmit={handleSubmit}>
+            <Input type="text" placeholder="Edit . . ." value={value} onChange={(e) => setValue(e.target.value)} maxLength={100} />
+            <EditButton type="submit" text="Ok"/>
+        </FormEdit>
     )
 }
 

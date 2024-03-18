@@ -8,7 +8,7 @@ export const SideBarContainer = styled.div<{ toggleSideBar: boolean }>`
   height: 100vh;
   z-index: 999;
   overflow: auto;
-  background-color: #2b3031;
+  background-color: #222;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -59,7 +59,7 @@ export const LayoutContainer = styled.div`
 
 export const MainContainer = styled.main`
   width: 100%;
-  height: 100vh;
   overflow-y: scroll;
   padding: 1rem;
+  background-color: ${({theme}) => theme.colors.background};
 `;

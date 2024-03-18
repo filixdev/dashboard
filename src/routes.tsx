@@ -1,10 +1,16 @@
 import { Route, Routes } from "react-router-dom";
-import { ErrorPage, Music, LayoutWithSidebar, Todo, Crypto, Dashboard, Contacts, Calendar, Notes, Weather } from "./components";
+import { ErrorPage, Music, LayoutWithSidebar, Todo, Dashboard, Contacts, Calendar, Notes, Weather } from "./components";
+import { BaseTheme } from "./theme/types";
 
-export const AppRoutes = () => {
+interface AppRoutesProps {
+  toggleTheme: () => void;
+  theme: BaseTheme;
+}
+
+export const AppRoutes: React.FC<AppRoutesProps> = ({toggleTheme, theme}) => {
   return (
       <Routes>
-        <Route element={<LayoutWithSidebar />}>
+        <Route element={<LayoutWithSidebar toggleTheme={toggleTheme} theme={theme}/>}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="/contacts" element={<Contacts />} />
@@ -12,7 +18,7 @@ export const AppRoutes = () => {
           <Route path="/weather" element={<Weather />} />
           <Route path="/music" element={<Music />} />
           <Route path="/notes" element={<Notes />} />
-          <Route path="/crypto" element={<Crypto />} />
+          {/* <Route path="/notes" element={<HabitsTracker />} /> */}
           <Route path="/*" element={<ErrorPage />} />
         </Route>
       </Routes>
