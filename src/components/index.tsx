@@ -1,6 +1,5 @@
 import { Contacts } from "./Pages/Contacts";
 import { Weather } from "./Pages/Weather";
-import { Crypto } from "./Pages/Crypto";
 import { Dashboard } from "./Pages/Dashboard";
 import { Todo } from "./Pages/Todo";
 import { Music } from "./Pages/Music/Music";
@@ -14,7 +13,6 @@ export {
     Todo,
     Contacts,
     Weather,
-    Crypto,
     Music,
     ErrorPage,
     Dashboard,

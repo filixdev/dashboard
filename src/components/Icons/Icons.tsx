@@ -3,7 +3,6 @@ import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
-import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -19,6 +18,8 @@ import FastRewindIcon from '@mui/icons-material/FastRewind';
 import CloseIcon from '@mui/icons-material/Close';
 import CheckIcon from '@mui/icons-material/Check';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import NightlightIcon from '@mui/icons-material/Nightlight';
 
 export {
     HomeIcon,
@@ -26,7 +27,6 @@ export {
     PermContactCalendarIcon,
     WbSunnyIcon,
     PlayCircleIcon,
-    CurrencyBitcoinIcon,
     KeyboardArrowLeftIcon,
     KeyboardArrowRightIcon,
     CalendarMonthIcon,
@@ -41,5 +41,7 @@ export {
     FastForwardIcon,
     CloseIcon,
     CheckIcon,
-    CheckBoxOutlineBlankIcon
+    CheckBoxOutlineBlankIcon,
+    Brightness7Icon,
+    NightlightIcon
 }

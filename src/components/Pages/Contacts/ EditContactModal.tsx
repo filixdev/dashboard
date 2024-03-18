@@ -1,5 +1,5 @@
-import { Modal } from "../../Common/Modal"
-import { Form, Value } from "../../Common/Form"
+import { Modal } from "../../common/Modal"
+import { Form, Value } from "../../common/Form"
 
 
 export interface EditUserModalProps {

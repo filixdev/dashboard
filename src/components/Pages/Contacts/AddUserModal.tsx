@@ -1,5 +1,5 @@
-import { Form, Value } from "../../Common/Form";
-import { Modal } from "../../Common/Modal"
+import { Form, Value } from "../../common/Form";
+import { Modal } from "../../common/Modal"
 
 export interface AddUserModalProps {
     handleInputChange: (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;

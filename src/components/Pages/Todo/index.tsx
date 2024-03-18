@@ -1,11 +1,11 @@
 import { SetStateAction, useState } from "react"
 import { v4 as uuidv4 } from 'uuid'
-import { Form, Heading1, Input, TextWrapper, TodoContainer, TodoList } from "./style"
+import { Form, Heading1Styled, Input, NoTaskContainer, TextWrapper, TodoContainer, TodoList } from "./style"
 import { TodoItem } from "./TodoItem"
 import { EditTodo } from "./EditTodo"
-import { Button } from "../../Common/Button"
-import { Text } from "../../Common/Typography"
-import { CheckBoxOutlineBlankIcon, CheckIcon } from "../../Icons/Icons"
+import { Button } from "../../common/Button"
+import { Heading3, Text } from "../../common/Typography"
+import { getDate } from "../../../utils/date"
 
 export interface Todos {
   id: string
@@ -52,28 +52,32 @@ export const Todo = () => {
 
   return (
     <div>
-      <Heading1>Get shit done!</Heading1>
+      <Heading1Styled>Get shit done!</Heading1Styled>
+      <Text fontStyle='italic'>{getDate()}</Text>
       <TextWrapper>
-        <CheckIcon />
-        <Text>Todo completed: {todoCompleted}</Text>
-        <CheckBoxOutlineBlankIcon />
-        <Text>Todo not completed: {todoNotCompleted}</Text>
+        <Text fontWeight='bold' color='#444'>Completed: {todoCompleted}</Text>
+        <Text fontWeight='bold' color='#444'>Not completed: {todoNotCompleted}</Text>
       </TextWrapper>
       <Form onSubmit={handleSubmit}>
-        <Input type="text" placeholder="Add todo . . ." onChange={handleChange} value={inputValue} />
-        {/* <Button type="submit">Add</Button> */}
+        <Input type="text" placeholder="Add Todo . . ." onChange={handleChange} value={inputValue} maxLength={100} />
         <Button text='Add' onClick={() => null} />
       </Form>
       <TodoContainer>
-        <TodoList>
-          {todos.map((todo, index) => (
-            todo.isEditing ? (
-              <EditTodo key={index} todo={todo} editText={editText} />
-            ) : (
-              <TodoItem key={index} todo={todo} toggleChecked={toggleChecked} deleteTodo={deleteTodo} editTodo={editTodo} />
-            )
-          ))}
-        </TodoList>
+        {todos.length ? (
+          <TodoList>
+            {todos.map((todo, index) => (
+              todo.isEditing ? (
+                <EditTodo key={index} todo={todo} editText={editText} />
+              ) : (
+                <TodoItem key={index} todo={todo} toggleChecked={toggleChecked} deleteTodo={deleteTodo} editTodo={editTodo} />
+              )
+            ))}
+          </TodoList>
+        ) : (
+          <NoTaskContainer>
+            <Heading3>No Task</Heading3>
+          </NoTaskContainer>
+        )}
       </TodoContainer>
     </div>
   )
